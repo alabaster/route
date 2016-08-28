@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    backupGlobals="false"
+    backupStaticAttributes="false"
+    bootstrap="./tests/bootstrap.php"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    processIsolation="false"
+    stopOnFailure="false"
+    syntaxCheck="true"
+    verbose="true">
+    <testsuites>
+        <testsuite name="alabaster-route/tests">
+            <file>./tests/classes/RouteTest.php</file>
+            <file>./tests/classes/CollectionTest.php</file>
+            <file>./tests/classes/CollectionLoaderTest.php</file>
+            <file>./tests/classes/DispatchingResultTest.php</file>
+            <file>./tests/classes/DispatcherTest.php</file>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="./tests/coverage" lowUpperBound="35" highLowerBound="70"/>
+    </logging>
+</phpunit>

@@ -1,0 +1,21 @@
+# Product route
+
+product.details:
+
+    GET:
+        - handler: handler_1
+          types: ['text/html', '*/*']
+
+        - handler: 'handler_2'
+          types: ['application/json']
+
+# Category routes
+
+category.listing:
+
+    GET:
+        - handler: 'handler_3'
+          types : ['application/json', 'text/html']
+
+        - handler: 'handler_4'
+          types : ['text/plain']
